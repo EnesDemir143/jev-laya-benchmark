@@ -1,0 +1,29 @@
+# secrets
+.env
+.env.*
+!.env.example
+
+# python
+.venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# local issue dumps and classification checkpoints
+data/
+*.tmp
+
+# local tooling
+.rtk/
+.agents/skills/
+
+# os
+.DS_Store
