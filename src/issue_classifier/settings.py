@@ -21,3 +21,5 @@ class Settings(BaseSettings):
     typesafe_default_model: str = "jev-latest"
     noul_threshold: float = Field(default=0.5, ge=0.0, le=1.0)
     typesafe_timeout: float = Field(default=30.0, gt=0.0)
+    typesafe_concurrency: int = Field(default=8, ge=1, le=32)
+    typesafe_requests_per_second: float = Field(default=15.0, gt=0.0, le=20.0)

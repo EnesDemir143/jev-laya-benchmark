@@ -1,4 +1,4 @@
-from typesafe_sdk import Choice, Noul, TypeSafeClient
+from typesafe_sdk import AsyncTypeSafeClient, Choice, Noul
 
 from issue_classifier.io import label_names
 from issue_classifier.models import ClassifiedIssue, Classification, IssueRecord
@@ -29,7 +29,7 @@ QUESTIONS = {
 }
 
 
-def make_client(settings: Settings) -> TypeSafeClient:
+def make_client(settings: Settings) -> AsyncTypeSafeClient:
     kwargs: dict = {
         "api_key": settings.typesafe_api_key.get_secret_value(),
         "model": settings.typesafe_default_model,
@@ -37,17 +37,20 @@ def make_client(settings: Settings) -> TypeSafeClient:
     }
     if settings.typesafe_base_url:
         kwargs["base_url"] = settings.typesafe_base_url
-    return TypeSafeClient(**kwargs)
+    return AsyncTypeSafeClient(**kwargs)
 
 
-def classify_issue(
-    client: TypeSafeClient,
+async def classify_issue(
+    client: AsyncTypeSafeClient,
     resume: str,
     issue: IssueRecord,
     *,
     threshold: float,
 ) -> Classification:
-    result = client.system_one(state=issue_state(resume, issue), questions=QUESTIONS)
+    result = await client.system_one(
+        state=issue_state(resume, issue),
+        questions=QUESTIONS,
+    )
     beginner = result.nouls["beginner_friendly"].noul
     cv_fit = result.nouls["cv_fit"].noul
     difficulty_answer = result.choices["difficulty"]
@@ -65,8 +68,8 @@ def classify_issue(
     )
 
 
-def classify_or_error(
-    client: TypeSafeClient,
+async def classify_or_error(
+    client: AsyncTypeSafeClient,
     resume: str,
     issue: IssueRecord,
     *,
@@ -79,7 +82,7 @@ def classify_or_error(
         labels=label_names(issue),
     )
     try:
-        classified = classify_issue(client, resume, issue, threshold=threshold)
+        classified = await classify_issue(client, resume, issue, threshold=threshold)
     except Exception as exc:  # noqa: BLE001 — keep the batch running
         base.error = f"{type(exc).__name__}: {exc}"
         return base

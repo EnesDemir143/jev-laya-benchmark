@@ -5,6 +5,7 @@ description = "Classify oh-my-pi GitHub issues with TypeSafe Jev"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "laya-mlx>=0.2.0",
     "pydantic>=2.13.5",
     "pydantic-settings>=2.15.0",
     "python-dotenv>=1.2.3",
