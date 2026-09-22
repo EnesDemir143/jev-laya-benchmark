@@ -3,7 +3,10 @@
 Kaynak sınıflandırma: `data/oh-my-pi-issue-classifications.json`.
 Tam katalog: [`issues.md`](issues.md).
 
-CV referansı: Enes Demir — TypeScript + Python + Rust, LangGraph/RAG ajanları, CLI/TUI (Apex/Textual), FastAPI/React, GitHub Actions. oh-my-pi tarafında bu, **prompt/tool/CLI/TUI/agent** işlerine denk geliyor; saf macOS native veya derin protocol RFC’leri değil.
+CV referansı: adayın TypeScript + Python + Rust, LangGraph/RAG ajanları,
+CLI/TUI (Apex/Textual), FastAPI/React ve GitHub Actions deneyimi. oh-my-pi
+tarafında bu, **prompt/tool/CLI/TUI/agent** işlerine denk geliyor; saf macOS
+native veya derin protocol RFC’leri değil.
 
 ## Seçim kuralı
 

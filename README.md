@@ -43,9 +43,8 @@ See the full English report: [Jev vs. Laya Benchmark Report](docs/jev-laya-bench
 
 ## Results
 
-The benchmark completed all 100 issues successfully. On the local machine used
-for this run—a Mac14,9 with Apple M2 Pro, 10 logical CPU cores, 16 GB RAM, and
-arm64 Darwin—Laya was faster. This run warmed Laya before timing, but did not
+The benchmark completed all 100 issues successfully. On an Apple Silicon
+macOS laptop with 16 GB RAM, Laya was faster. This run warmed Laya before timing, but did not
 warm Jev, so the latency numbers are directional rather than an apples-to-apples
 warm-run comparison:
 

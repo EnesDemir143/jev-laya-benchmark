@@ -19,6 +19,7 @@ htmlcov/
 
 # local issue dumps and classification checkpoints
 data/
+resume.md
 *.tmp
 
 # local tooling

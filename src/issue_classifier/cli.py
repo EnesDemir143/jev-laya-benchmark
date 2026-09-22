@@ -19,7 +19,7 @@ from issue_classifier.settings import Settings
 ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_INPUT = ROOT / "data" / "oh-my-pi-open-issues.json"
 DEFAULT_OUTPUT = ROOT / "data" / "oh-my-pi-issue-classifications.json"
-DEFAULT_RESUME = Path("/Users/enesdemir/Documents/resumes/resume_md/english_md/main.md")
+DEFAULT_RESUME = ROOT / "resume.md"
 DRY_RUN_LIMIT = 10
 
 
