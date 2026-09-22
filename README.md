@@ -1,7 +1,10 @@
 # Jev Tryout
 
-Benchmarking TypeSafe Jev against `laya-mlx` for classifying open oh-my-pi
-GitHub issues by beginner-friendliness, CV fit, and difficulty.
+Benchmarking [TypeSafe Jev](https://typesafe.ai/) against
+[`laya-mlx`](https://github.com/mizorewww/laya-mlx) for classifying open
+oh-my-pi GitHub issues by beginner-friendliness, CV fit, and difficulty.
+
+This is a local benchmark experiment, not a production performance claim.
 
 ## Setup
 
@@ -42,7 +45,9 @@ See the full English report: [Jev vs. Laya Benchmark Report](docs/jev-laya-bench
 
 The benchmark completed all 100 issues successfully. On the local machine used
 for this run—a Mac14,9 with Apple M2 Pro, 10 logical CPU cores, 16 GB RAM, and
-arm64 Darwin—Laya was faster:
+arm64 Darwin—Laya was faster. This run warmed Laya before timing, but did not
+warm Jev, so the latency numbers are directional rather than an apples-to-apples
+warm-run comparison:
 
 | Metric | Jev | Laya |
 |---|---:|---:|

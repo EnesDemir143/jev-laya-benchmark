@@ -2,8 +2,10 @@
 
 ## Summary
 
-This benchmark compares TypeSafe Jev with `laya-mlx` on the same 100 open
-oh-my-pi issues. Both models completed all 100 issues successfully.
+This local benchmark experiment compares [TypeSafe Jev](https://typesafe.ai/)
+with [`laya-mlx`](https://github.com/mizorewww/laya-mlx) on the same 100 open
+oh-my-pi issues. Both models completed all 100 issues successfully. It is not
+a production performance claim.
 
 | Metric | Jev | Laya |
 |---|---:|---:|
@@ -34,7 +36,7 @@ For continuous Noul scores:
 - Laya model: `aac6fef/laya-mlx`
 - Numeric type: `float16`
 - Batch size: 16
-- Warm-up: enabled before timing
+- Warm-up: enabled for Laya only; Jev was not warmed before its first timed call
 - Raw results: `data/jev-laya-benchmark-fp16-warm.json`
 
 The raw JSON remains local because `data/` is ignored by Git. This keeps issue
@@ -43,7 +45,9 @@ summary here.
 
 ## Interpretation
 
-Latency favors Laya for this local warm-run benchmark. Jev and Laya agree most
-often on beginner-friendliness, while CV-fit agreement is materially lower.
-The Noul-score differences show that CV-fit disagreement is not only caused by
-the 0.5 threshold; the underlying scores also diverge.
+Laya was faster in this local run, but because only Laya was warmed before
+timing, the latency comparison is directional and should not be described as a
+fair warm-run comparison. Jev and Laya agree most often on
+beginner-friendliness, while CV-fit agreement is materially lower. The
+Noul-score differences show that CV-fit disagreement is not only caused by the
+0.5 threshold; the underlying scores also diverge.
