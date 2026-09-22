@@ -1,8 +1,10 @@
 # Jev-laya Benchmark
 
-Benchmarking [TypeSafe Jev](https://typesafe.ai/) against
-[`laya-mlx`](https://github.com/mizorewww/laya-mlx) for classifying open
-oh-my-pi GitHub issues by beginner-friendliness, CV fit, and difficulty.
+A local benchmark comparing [TypeSafe Jev](https://typesafe.ai/) and
+[`laya-mlx`](https://github.com/mizorewww/laya-mlx) for structured issue
+classification.
+
+Tags: `jev` · `laya` · `mlx` · `rlcd` · `benchmark` · `issue-classification`
 
 This is a local benchmark experiment, not a production performance claim.
 

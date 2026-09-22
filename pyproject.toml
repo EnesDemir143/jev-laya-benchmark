@@ -1,7 +1,8 @@
 [project]
 name = "jev-tryout"
 version = "0.1.0"
-description = "Classify oh-my-pi GitHub issues with TypeSafe Jev"
+description = "Local Jev and Laya-MLX benchmark for structured issue classification"
+keywords = ["jev", "laya", "mlx", "rlcd", "benchmark", "issue-classification"]
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
