@@ -24,6 +24,8 @@ data/
 # local tooling
 .rtk/
 .agents/skills/
+AGENTS.md
+skills-lock.json
 
 # os
 .DS_Store
