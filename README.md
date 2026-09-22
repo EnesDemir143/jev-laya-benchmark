@@ -1,4 +1,4 @@
-# Jev Tryout
+# Jev-laya Benchmark
 
 Benchmarking [TypeSafe Jev](https://typesafe.ai/) against
 [`laya-mlx`](https://github.com/mizorewww/laya-mlx) for classifying open
